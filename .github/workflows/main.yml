@@ -86,6 +86,6 @@ jobs:
           push: true
           platforms: linux/amd64,linux/386,linux/arm64/v8
           tags: |
-            ${{ secrets.DOCKERHUB_USER }}/${{ steps.meta.outputs.REPO_NAME }}:latest
-            ${{ secrets.DOCKERHUB_USER }}/${{ steps.meta.outputs.REPO_NAME }}:${{ steps.meta.outputs.SHORT_SHA }}
+            ${{ secrets.DOCKERHUB_USER }}/${{ secrets.DOCKERHUB_PROJECT }}:latest
+            ${{ secrets.DOCKERHUB_USER }}/${{ secrets.DOCKERHUB_PROJECT }}:${{ steps.meta.outputs.SHORT_SHA }}
           cache-from: type=local,src=/tmp/.buildx-cache
