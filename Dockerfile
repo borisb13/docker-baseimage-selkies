@@ -36,7 +36,7 @@ RUN \
   cp -ar dist/* /buildout/
 
 # Runtime stage
-FROM borisb13/docker-baseimage-debian:bookworm
+FROM ghcr.io/borisb13/docker-baseimage-debian:bookworm
 
 # set version label
 ARG BUILD_DATE
